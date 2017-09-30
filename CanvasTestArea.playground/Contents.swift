@@ -19,21 +19,21 @@
 // These are some required statements to make this playground work.
 import Cocoa
 import PlaygroundSupport
-
 // Create a new canvas
-let canvas = Canvas(width: 300, height: 500)
-
-// Draw a circle at the origin with radius of 50 pixels
-canvas.drawEllipse(centreX: 0, centreY: 0, width: 50, height: 50)
-
-// Show where the origin is
-canvas.drawAxes()
-
-// Draw an ellipse in a different color at the centre of the canvas
-canvas.fillColor = Color.green
-canvas.drawEllipse(centreX: 150, centreY: 250, width: 50, height: 100)
-
-// add a rectangle to the top of the screen
-canvas.drawRectangle(centreX: 150, centreY: 400, width: 100, height: 50)
+let canvas = Canvas(width: 600, height: 500)
+canvas.fillColor = Color.init(hue: 200, saturation: 50, brightness: 100, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 600, height: 500)
+// sun rays in yellow
+canvas.defaultLineWidth = 5
+canvas.lineColor = Color.init(hue: 55, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 0, toY: 0)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 200, toY: 0)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 450, toY: 0)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 800, toY: 0)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 1500, toY: 0)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 8000, toY: 0)
+// make sunrays in between other sun rays in orange
+canvas.lineColor = Color.init(hue: 38, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawLine(fromX: 0, fromY: 500, toX: 100, toY: 0)
 // This code is necessary to see the result in the Assistant Editor at right
 PlaygroundPage.current.liveView = canvas.imageView
