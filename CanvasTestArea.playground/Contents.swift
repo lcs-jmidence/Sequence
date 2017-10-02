@@ -55,6 +55,10 @@ canvas.drawShapesWithFill = true
 canvas.fillColor = Color.yellow
 canvas.drawShapesWithBorders = false
 canvas.drawEllipse(centreX: 0, centreY: 500, width: 125, height: 125, borderWidth: 0)
-
+// make clouds at top right corner
+canvas.fillColor = Color.white
+canvas.drawShapesWithBorders = false
+canvas.drawEllipse(centreX: 560, centreY: 530, width: 150, height: 150, borderWidth: 0)
+canvas.drawEllipse(centreX: 600, centreY: 450, width: 100, height: 100, borderWidth: 0)
 // This code is necessary to see the result in the Assistant Editor at right
 PlaygroundPage.current.liveView = canvas.imageView
