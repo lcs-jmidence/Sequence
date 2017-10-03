@@ -21,7 +21,7 @@ import Cocoa
 import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 600, height: 500)
-canvas.fillColor = Color.init(hue: 200, saturation: 50, brightness: 100, alpha: 100)
+canvas.fillColor = Color.init(hue: 200, saturation: 60, brightness: 100, alpha: 100)
 canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 600, height: 500)
 // sun rays in yellow
 canvas.defaultLineWidth = 5
@@ -60,5 +60,26 @@ canvas.fillColor = Color.white
 canvas.drawShapesWithBorders = false
 canvas.drawEllipse(centreX: 560, centreY: 530, width: 150, height: 150, borderWidth: 0)
 canvas.drawEllipse(centreX: 600, centreY: 450, width: 100, height: 100, borderWidth: 0)
+// draw red rainbow
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.red
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 0)
+canvas.drawEllipse(centreX: 300, centreY: -100, width: 600, height: 650, borderWidth: 30)
+// draw orange rainbow
+canvas.borderColor = Color.orange
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 0)
+canvas.drawEllipse(centreX: 300, centreY: -100, width: 550, height: 600, borderWidth: 30)
+// draw yellow rainbow
+canvas.borderColor = Color.yellow
+canvas.drawEllipse(centreX: 300, centreY: -100, width: 500, height: 550, borderWidth: 30)
+//draw green rainbow
+canvas.borderColor = Color.green
+canvas.drawEllipse(centreX: 300, centreY: -100, width: 450, height: 500, borderWidth: 30)
+//draw blue rainbow
+canvas.borderColor = Color.blue
+canvas.drawEllipse(centreX: 300, centreY: -100, width: 400, height: 450, borderWidth: 30)
+//draw purple rainbow
+canvas.borderColor = Color.purple
+canvas.drawEllipse(centreX: 300, centreY: -100, width: 350, height: 400, borderWidth: 30)
 // This code is necessary to see the result in the Assistant Editor at right
 PlaygroundPage.current.liveView = canvas.imageView
